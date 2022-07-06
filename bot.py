@@ -115,10 +115,21 @@ class Bot(metaclass=ABCMeta):
         if do_all_checks:
             self._check_game_paused(wait_counter)
             self._check_defeated(wait_counter)
+            self._check_monkey_knowledge(wait_counter)
 
     def _check_level_up(self, wait_counter):
         if wait_counter % config.CHECK_LEVEL_UP_COUNTER == 0 and self._is_present(config.PROMPT_LEVEL_UP):
             logging.warning('Level up detected - double clicking screen')
+            pag.click()
+            pag.click()
+            pag.click()
+            pag.click()
+            self._check_monkey_knowledge(config.CHECK_LEVEL_UP_COUNTER)
+            self._check_game_paused(config.CHECK_GAME_PAUSED_COUNTER)
+    
+    def _check_monkey_knowledge(self, wait_counter):
+        if wait_counter % config.CHECK_LEVEL_UP_COUNTER == 0 and self._is_present(config.PROMPT_MONKEY_KNOWLEDGE):
+            logging.warning('MONKEY KNOWLEDGE DETECTED - double clicking screen')
             pag.click()
             pag.click()
             self._check_game_paused(config.CHECK_GAME_PAUSED_COUNTER)

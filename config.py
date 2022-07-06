@@ -46,6 +46,7 @@ BUTTON_GAME_FREEPLAY = 'resources/menu/button_game_freeplay.png'
 
 PROMPT_DEFEAT = 'resources/menu/prompt_defeat.png'
 PROMPT_LEVEL_UP = 'resources/menu/prompt_level_up.png'
+PROMPT_MONKEY_KNOWLEDGE = 'resources/menu/prompt_monkey_knowledge.png'
 
 PROMPT_OVERWRITE = 'resources/menu/prompt_overwrite.png'
 BUTTON_OVERWRITE_OK = 'resources/menu/button_overwrite_ok.png'
