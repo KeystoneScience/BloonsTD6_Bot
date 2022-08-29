@@ -55,14 +55,15 @@ class Bot(metaclass=ABCMeta):
     def _collect_event_rewards(self):
         logging.info('Collecting reward monkeys')
         for collection_x in config.COLLECTION_XS:
+            logging.info('Clicking grid')
             pag.click((self._offset[0] + collection_x,
                       self._offset[1] + config.COLLECTION_Y))
             pag.click((self._offset[0] + collection_x,
                       self._offset[1] + config.COLLECTION_Y))
             if self._is_present(config.BUTTON_EVENT_CONTINUE):
                 break
-        self._monkeys_collection_path = '{}/collected_monkeys_{}.png'.format(
-            config.LOGS_DIR, time.time())
+        # self._monkeys_collection_path = '{}/collected_monkeys_{}.png'.format(
+        #     config.LOGS_DIR, time.time())
         pag.screenshot(self._monkeys_collection_path)
         self.click_on(config.BUTTON_EVENT_CONTINUE)
 
@@ -165,6 +166,7 @@ class Bot(metaclass=ABCMeta):
         time.sleep(config.START_SLEEP_SECONDS)
         self._offset = pag.position()
         logging.debug('Screen offset set at {}'.format(self._offset))
+        # self._collect_event_rewards()
         if required_hero:
             self._check_selected_hero(
                 config.HERO_SELECTED[required_hero.lower()], required_hero)

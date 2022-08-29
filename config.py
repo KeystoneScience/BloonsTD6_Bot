@@ -52,7 +52,7 @@ PROMPT_OVERWRITE = 'resources/menu/prompt_overwrite.png'
 BUTTON_OVERWRITE_OK = 'resources/menu/button_overwrite_ok.png'
 
 # Events
-COLLECTION_XS = range(50, 1500, 50)
+COLLECTION_XS = range(50, 1440, 50)
 COLLECTION_Y = 450
 
 BUTTON_EVENT_COLLECT = 'resources/menu/button_event_collect.png'
