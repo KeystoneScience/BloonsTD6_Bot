@@ -60,7 +60,7 @@ class Bot(metaclass=ABCMeta):
                       self._offset[1] + config.COLLECTION_Y))
             pag.click((self._offset[0] + collection_x,
                       self._offset[1] + config.COLLECTION_Y))
-            if self._is_present(config.BUTTON_EVENT_CONTINUE):
+            if self._is_present(config.BUTTON_MENU_PLAY):
                 break
         # self._monkeys_collection_path = '{}/collected_monkeys_{}.png'.format(
         #     config.LOGS_DIR, time.time())

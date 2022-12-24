@@ -110,3 +110,6 @@ venv.bak/
 _logs/
 btd6bot/
 *.psd
+
+# silly mac
+*.DS_Store
